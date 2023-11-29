@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Give Astro a Christmas Present</h1>
+    <p>copy about giving astro a present</p>
+    <!-- ADD FORM METHOD AND ACTION -->
+    <form method="" action="">
+        <fieldset>
+        <label for="name">Enter Your Name: <input id="name" name="name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+    </fieldset>
+        <fieldset>
+            <legend>Do you think Astro was nice or naughty?</legend>
+            <label><input id="naughty" type="radio" name="naughty-nice" value="naughty" checked> Naughty</label>
+            <label><input id="nice" type="radio" name="naughty-nice" value="nice"> Nice</label>
+          </fieldset>
+          <fieldset>
+          <label for="treat">Which treat do you want to give Astro?
+            <select id="treat" name="treat">
+              <option value="">(select one)</option>
+              <option value="1">Chicken</option>
+              <option value="2">Cheese</option>
+              <option value="3">Beef</option>
+              <option value="4">Duck</option>
+            </select>
+          </label>
+          <label for="message">Leave a message for Astro:
+            <textarea id="message" name="message" rows="3" cols="30" placeholder="Wishing you a merry pugmas..."></textarea>
+          </label>
+        </fieldset>
+    </form>
+</body>
+</html>
