@@ -3,36 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 </head>
-<body>
-    <h1>Give Astro a Christmas Present</h1>
-    <p>copy about giving astro a present</p>
-    <!-- ADD FORM METHOD AND ACTION -->
-    <form method="" action="">
-        <fieldset>
-        <label for="name">Enter Your Name: <input id="name" name="name" type="text" required /></label>
-        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
-    </fieldset>
-        <fieldset>
-            <legend>Do you think Astro was nice or naughty?</legend>
-            <label><input id="naughty" type="radio" name="naughty-nice" value="naughty" checked> Naughty</label>
-            <label><input id="nice" type="radio" name="naughty-nice" value="nice"> Nice</label>
-          </fieldset>
-          <fieldset>
-          <label for="treat">Which treat do you want to give Astro?
-            <select id="treat" name="treat">
-              <option value="">(select one)</option>
-              <option value="1">Chicken</option>
-              <option value="2">Cheese</option>
-              <option value="3">Beef</option>
-              <option value="4">Duck</option>
-            </select>
-          </label>
-          <label for="message">Leave a message for Astro:
-            <textarea id="message" name="message" rows="3" cols="30" placeholder="Wishing you a merry pugmas..."></textarea>
-          </label>
+<body class="flex">
+  <!-- Sidebar Start -->
+  <div class="flex flex-row min-h-screen">
+    <div class="flex flex-col w-56 bg-white overflow-hidden">
+        <div>
+            <img src="https://images.pexels.com/photos/7788870/pexels-photo-7788870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        </div>
+        <ul class="flex flex-col py-4">
+            <li>
+            <a href="index.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-900">
+                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
+                <span class="text-sm font-medium">Home</span>
+            </a>
+            </li>
+            <li>
+            <a href="about.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-music"></i></span>
+                <span class="text-sm font-medium">About</span>
+            </a>
+            </li>
+            <li>
+            <a href="form.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-drink"></i></span>
+                <span class="text-sm font-medium">Feed</span>
+            </a>
+            </li>
+            <li>
+            <a href="contact.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-shopping-bag"></i></span>
+                <span class="text-sm font-medium">Contact</span>
+            </a>
+            </li>
+        </ul>
+    </div>
+  </div>
+<!-- Sidebar End -->
+<!--Form Start-->
+<div class="flex flex-col w-full p-6 bg-orange-100">
+  <form method="post" action="form-complete.html">
+  <div class="space-y-3 w-1/2 bg-white p-6">
+      <h1 class="text-xl font-semibold">Give Astro a present</h1>
+      <h2 class="text-sm">Copy about giving Astro a Christmas present.</h2>
+      <div class="pt-3 grid grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-6">
+        <fieldset class="sm:col-span-4">
+          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Enter Your Name</label>
+          <div class="mt-2">
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 pl-2 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="John Wick">
+          </div>
         </fieldset>
-    </form>
+        <fieldset class="sm:col-span-4">
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 pl-2 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="johnwick@puglyfe.com">
+          </div>
+        </fieldset>
+        <fieldset class="sm:col-span-4">
+            <label for="naughty-nice" class="block text-sm font-medium text-gray-900">Do you think Astro was naughty or nice?</label>
+            <div class="block pt-2 pb-2 space-x-4">
+              <label class="text-sm font-medium text-gray-900">
+                <input
+                  type="radio"
+                  id="naughty"
+                  name="naughty-nice"
+                  value="naughty"
+                  class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
+                  checked
+                />
+                Naughty
+              </label>
+              <label class="text-sm font-medium text-gray-900">
+                <input
+                  type="radio"
+                  id="nice"
+                  name="naughty-nice"
+                  value="nice"
+                  class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
+                />
+                Nice
+              </label>
+            </div>
+        </fieldset>
+        <fieldset class="sm:col-span-4">
+          <label for="treat" class="block text-sm font-medium text-gray-900">Which treat do you want to give Astro?</label>
+          <div class="mt-2">
+            <select id="treat" name="treat" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+              <option>Chicken</option>
+              <option>Cheese</option>
+              <option>Duck</option>
+              <option>Beef</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="sm:col-span-4">
+          <label for="message" class="block text-sm font-medium text-gray-900">Leave Astro a message</label>
+          <div class="mt-2">
+            <textarea id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 pl-2 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Wishing you a merry pugmas..."></textarea>
+          </div>
+        </fieldset>
+        <div class="sm:col-span-4 my-4 flex justify-end gap-x-6">
+          <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send</button>
+        </div>
+      </div>
+  </div>
+  </form>
+</div>
+<!--Form End -->
 </body>
 </html>
