@@ -9,12 +9,13 @@
 </head>
 <body class="flex">
   <!-- Sidebar Start -->
-  <div class="flex flex-row min-h-screen">
-    <div class="flex flex-col w-56 bg-white overflow-hidden">
-        <div>
-            <img src="https://images.pexels.com/photos/7788870/pexels-photo-7788870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
-        </div>
-        <ul class="flex flex-col py-4">
+  <div class="flex flex-row h-screen">
+    <div class="flex flex-col w-56 h-screen">
+        <header>
+            <img class="flex place-items-center w-50" src="https://i.ibb.co/VqGpWBP/astrogcillustration.jpg" />
+        </header>
+        <content>
+            <ul class="flex flex-col py-4">
             <li>
             <a href="index.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-900">
                 <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
@@ -39,18 +40,20 @@
                 <span class="text-sm font-medium">Contact</span>
             </a>
             </li>
-        </ul>
+            </ul>
+        </content>
+        <footer class="fixed bottom-0 p-2 w-56">
+            <hr class="pb-2">
+            <span class="text-xs text-gray-500">© 2023 All treats reserved by Astro.</span>
+        </footer>
     </div>
-  </div>
+</div>
 <!-- Sidebar End -->
 <!--Form Start-->
 <div class="flex flex-col w-full p-6 bg-orange-100">
-  <form method="get" action="form-complete.html">
   <div class="space-y-3 w-1/2 bg-white p-6">
-      <h1 class="text-xl font-semibold">Give Astro a present</h1>
-      <h2 class="text-sm">Copy about giving Astro a Christmas present.</h2>
+      <h1 class="text-xl font-semibold">Thanks for giving me a treat! 🖤 </h1>
   </div>
-  </form>
 </div>
 <!--Form End -->
 </body>
